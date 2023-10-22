@@ -1,0 +1,144 @@
+// Colors
+$background-color: #f6f6f6;
+$app-color: #5468ff;
+$text-color: #5c5c5c;
+$heading-color: #01083d;
+$button-color: #e1e5ff;
+$button-text-color: #000;
+$nav-color: #fff;
+$box-shadow-color: #060f56aa;
+
+// Sizes
+$text-font-size: 1.3rem;
+$heading-font-size: 1.8rem;
+$nav-font-size: 1.2rem;
+$button-font-size: 1.1rem;
+$logo-size: 65px;
+$nav-size: 100px;
+$box-shadow-blur: 70px;
+$button-border-size: 2px;
+
+// Spaces
+$space-sm: 10px;
+$space-md: 20px;
+$space-lg: 30px;
+
+// Radius
+$radii-sm: 8px;
+$radii-md: 12px;
+$radii-lg: 16px;
+
+// Viewport Units
+$viewport-height: 100vh;
+$viewport-width: 100vw;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  background: $app-color;
+  height: $nav-size;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $space-lg;
+  width: $viewport-width;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+}
+nav div img {
+  width: $logo-size;
+  height: $logo-size;
+  object-fit: contain;
+}
+nav div h2 {
+  font-size: $heading-font-size;
+  color: $nav-color;
+}
+
+nav ol {
+  display: flex;
+  align-items: center;
+  gap: $space-lg;
+}
+
+nav ol li {
+  color: $nav-color;
+  font-size: $nav-font-size;
+}
+
+nav div button {
+  height: 43px;
+  padding: 0 $space-md;
+  border-radius: $radii-lg;
+  box-shadow: 0 0 $box-shadow-blur $box-shadow-color;
+  background-color: $button-color;
+  color: $button-text-color;
+  font-size: $button-font-size;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+nav div button:hover {
+  background-color: #cfd3ea;
+}
+
+nav div button:hover:active {
+  transform: scale(0.9);
+}
+
+nav div button:last-child {
+  background-color: unset;
+  border: $button-border-size solid $button-color;
+  box-shadow: unset;
+  color: $nav-color;
+}
+
+main {
+  width: $viewport-width;
+  height: calc($viewport-height - $nav-size);
+  background-color: $background-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-sm;
+}
+
+main section h1 {
+  font-size: $heading-font-size;
+  color: $heading-color;
+}
+
+main section p {
+  font-size: $text-font-size;
+  color: $text-color;
+}

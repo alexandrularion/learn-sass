@@ -1,0 +1,21 @@
+main {
+  @include flexCenter();
+  width: $viewport-width;
+  height: calc($viewport-height - $nav-size);
+  background-color: $background-color;
+  flex-direction: column;
+
+  section {
+    @include flexbox(column,center,flex-start,unset);
+    gap: $space-sm;
+
+    h1 {
+      font-size: $heading-font-size;
+      color: $heading-color;
+    }
+    p {
+      font-size: $text-font-size;
+      color: $text-color;
+    }
+  }
+}

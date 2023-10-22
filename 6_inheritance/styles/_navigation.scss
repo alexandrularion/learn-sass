@@ -1,0 +1,58 @@
+nav {
+  @include flexbox(row,center,space-between,$app-color);
+  height: $nav-size;
+  padding: 0 $space-lg;
+  width: $viewport-width;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+
+    img {
+      width: $logo-size;
+      height: $logo-size;
+      object-fit: contain;
+    }
+    h2 {
+      font-size: $heading-font-size;
+      color: $nav-color;
+    }
+    button {
+      height: 43px;
+      padding: 0 $space-md;
+      border-radius: $radii-lg;
+      box-shadow: 0 0 $box-shadow-blur $box-shadow-color;
+      background-color: $button-color;
+      color: $button-text-color;
+      font-size: $button-font-size;
+      cursor: pointer;
+      transition: 0.2s all ease-in-out;
+
+      &:last-child {
+        background-color: unset;
+        border: $button-border-size solid $button-color;
+        box-shadow: unset;
+        color: $nav-color;
+      }
+      &:hover {
+        &:first-child {
+          background-color: #cfd3ea;
+        }
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+  ol {
+    display: flex;
+    align-items: center;
+    gap: $space-lg;
+
+    li {
+      color: $nav-color;
+      font-size: $nav-font-size;
+    }
+  }
+}

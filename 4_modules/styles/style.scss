@@ -1,0 +1,25 @@
+@import './_variables';
+@import './_navigation';
+@import './_main';
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}

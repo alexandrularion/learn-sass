@@ -4,10 +4,10 @@
   align-items: center;
 }
 
-@mixin flexbox($direction, $align-items, $justify-content, $background) {
+@mixin flexbox($direction, $align, $justify, $background) {
   display: flex;
   flex-direction: $direction;
-  align-items: $align-items;
-  justify-content: $justify-content;
+  align-items: $align;
+  justify-content: $justify;
   background-color: $background;
 }

@@ -1,5 +1,5 @@
 nav {
-  @include flexbox(row,center,space-between,$app-color);
+  @include flexbox(row, center, space-between, $app-color);
   height: $nav-size;
   padding: 0 $space-lg;
   width: $viewport-width;
